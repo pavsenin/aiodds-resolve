@@ -1,27 +1,24 @@
 const appConfig = {
   aggregates: [
     {
-      name: 'aggregate-name',
-      commands: 'common/aggregates/aggregate-name.commands.js',
-      projection: 'common/aggregates/aggregate-name.projection.js',
+      name: 'Event',
+      commands: 'common/aggregates/event.commands.js',
+      projection: 'common/aggregates/event.projection.js',
     },
   ],
   readModels: [
     {
-      name: 'read-model-name',
-      projection: 'common/read-models/read-model-name.projection.js',
-      resolvers: 'common/read-models/read-model-name.resolvers.js',
-      connectorName: 'default',
+      name: 'EventList',
+      projection: 'common/read-models/event_list.projection.js',
+      resolvers: 'common/read-models/event_list.resolvers.js',
+      connectorName: 'default'
     },
-  ],
-  viewModels: [
     {
-      name: 'view-model-name',
-      projection: 'common/view-models/view-model-name.projection.js',
-      serializeState: 'common/view-models/view-model-name.serialize_state.js',
-      deserializeState:
-        'common/view-models/view-model-name.deserialize_state.js',
-    },
+      name: 'BetList',
+      projection: 'common/read-models/bet_list.projection.js',
+      resolvers: 'common/read-models/bet_list.resolvers.js',
+      connectorName: 'default'
+    }
   ],
   sagas: [
     {
